@@ -11,20 +11,23 @@
 </head>
 <body>
     <header id="header" class="bg-primary text-white p-3 mb-4">
-        <div class="container">
+        <div class="container d-flex justify-content-between align-items-center">
             <h1 id="header-title">Item Lister
                 <span style="display:none">React Js</span>
             </h1>
+            <div>
+                <input id="filter" class="form-control" type="text" placeholder="Search Now">
+            </div>
         </div>
     </header>
     <div class="container">
-        <div id="main" class="card card-body">
+        <div id="main" class="card card-body mb-5">
 
             <h3 class="title">Add Items</h3>
 
-            <form action="#" class="row input-group mb-3">
+            <form id="form" action="#" class="row input-group mb-3">
                 <div class="col">
-                    <input class="form-control" type="text" placeholder="Add Item">
+                    <input id="item" class="form-control" type="text" placeholder="Add Item">
                 </div>
                 <div class="col">
                     <input class="btn btn-dark" type="submit" value="Submit">
@@ -33,17 +36,28 @@
 
             <h3 class="title">Items</h3>
 
-            <ul id="items" class="list-group">
-                <li class="list-group-item">Item One</li>
-                <li class="list-group-item">Item Two</li>
-                <li class="list-group-item">Item Three</li>
-                <li class="list-group-item">Item Four</li>
-                <li class="list-group-item">Item Five</li>
-                <li class="list-group-item">Item Six</li>
-                <li class="list-group-item">Item Seven</li>
-                <li class="list-group-item">Item Eight</li>
-                
+            <ul id="items" class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Item One <button class="delete btn btn-danger">X</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Item Two <button class="delete btn btn-danger">X</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Item Three <button class="delete btn btn-danger">X</button>
+                </li>
             </ul>
+            <br>
+
+            <div id="output"></div>
+
+            <br>
+            <div id="box" style="width:250px;height: 100px; background: #f4f4f4">
+
+            </div>
+            <br>
+
+            <button id="button" class="btn btn-dark btn-block">Click Here</button>
         </div>
     </div>
     
